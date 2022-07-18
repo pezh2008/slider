@@ -1,0 +1,17 @@
+.block {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.block1 {
+  border: 2px solid var(--black);
+  height: 100px;
+  width: 100px;  
+  background-color: var(--black);
+}
+.block2 {
+  border: 2px solid var(--red);
+  height: 100px;
+  width: 100px;
+  background-color: var(--red); 
+}
