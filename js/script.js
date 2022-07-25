@@ -1,85 +1,18 @@
-let city = document.querySelector(".brest");
-let user = document.querySelector(".dima");
-let age = document.querySelector(".age");
-let ag = [24,25,26, "sveta"]
+let slides = document.querySelectorAll(".slide");
+let left = document.querySelector(".btn-left");
+let right = document.querySelector(".btn-right");
 
-console.log( "привет", ag[3] );
+let activeIndex = 0;
 
-// for(let i=0; i<ag[2]; i++){
+function activeSlide(activeIndex) {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slides[activeIndex].classList.add("active");
+}
+function nextSlide() {
+  activeIndex++;
+  activeSlide(activeIndex);
+}
 
-//   console.log(ag[1]+ag[2]+ag[3])
-// }
-
-const sveta = {user, ag, city};
-console.log(sveta);
-console.log(ag[2])
-function test ()
-
-let one = 1;
-let two = 2;
-let summ = one + two;
-
-one + two
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const slides = Array.from(document.querySelectorAll("slide"));
-// const slider = document.querySelector(".slider");
-// const buttons = document.querySelectorAll(".butt");
-
-// function getleftright(){
-//   const activeSlide = document.querySelector(".slide active")
-//   const activeIndex = slides.indexOf("activeIndex")
-//   console.log(activeIndex);
-
-// }
-// getleftright();
-
-// let user = "dima";
-// let age = 31;
-// let message = "Hello"
-// for (let i = 0; i<user; i++) {
-  
-//   console.log (age)
-// }
-
-// let zero = 0;
-// while (zero < 5) {
-//   console.log(zero);
-//   zero++;
-// }
-// let left = document.querySelectorAll("btn-left butt");
-// let right = document.querySelectorAll("btn-right butt");
-// for(i = 0; i<fifti; i++)
+right.addEventListener("click", nextSlide);
